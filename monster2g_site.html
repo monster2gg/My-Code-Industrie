@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Monster2g — mon univers gaming.">
+<title>Monster2g | Gaming</title>
+<style>
+:root{--bg:#070711;--card:#101022;--text:#f5f5ff;--muted:#a7a7c4;--accent:#7c3cff;--accent2:#00e5ff;--line:#252541}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 20% 10%,#24104d 0,transparent 30%),radial-gradient(circle at 85% 20%,#063f50 0,transparent 25%),var(--bg);color:var(--text);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:45px 45px;mask-image:linear-gradient(to bottom,black,transparent 80%);z-index:-1}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(7,7,17,.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font-weight:900;font-size:22px;letter-spacing:1px}.logo span{color:var(--accent2)}
+nav a{color:#ddd;text-decoration:none;margin-left:25px;font-size:14px;transition:.25s}nav a:hover{color:var(--accent2)}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:110px 7% 70px;position:relative}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5;animation:float 7s ease-in-out infinite}
+.o1{width:180px;height:180px;background:#7c3cff;left:8%;top:25%}.o2{width:130px;height:130px;background:#00e5ff;right:10%;bottom:22%;animation-delay:-2s}
+.hero-inner{max-width:850px;animation:rise 1s ease both}
+.badge{display:inline-block;padding:8px 15px;border:1px solid #3b3b63;border-radius:999px;color:#bfc5ff;background:#111126;margin-bottom:20px}
+h1{font-size:clamp(58px,12vw,125px);line-height:.9;text-transform:uppercase;letter-spacing:-5px;text-shadow:0 0 35px rgba(124,60,255,.5)}
+h1 .g{background:linear-gradient(90deg,#fff,#a47aff,#00e5ff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:28px auto;color:var(--muted);font-size:18px;line-height:1.7}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:800;transition:.25s;border:1px solid var(--line);color:white}.primary{background:linear-gradient(90deg,var(--accent),#4c8dff);box-shadow:0 0 25px rgba(124,60,255,.35)}.secondary{background:#101022}.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+section{padding:90px 7%;max-width:1150px;margin:auto}.section-title{text-align:center;font-size:36px;margin-bottom:14px}.section-sub{text-align:center;color:var(--muted);margin-bottom:45px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,rgba(18,18,38,.9),rgba(9,9,20,.85));border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 35px rgba(0,0,0,.2);transition:.3s}.card:hover{transform:translateY(-7px);border-color:#5141a0}.card h3{margin-bottom:12px;font-size:22px}.card p{color:var(--muted);line-height:1.7}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.game{position:relative;overflow:hidden;min-height:230px}.game .emoji{font-size:55px;margin-bottom:20px;display:block}.game:after{content:"";position:absolute;width:130px;height:130px;background:var(--accent);filter:blur(55px);opacity:.18;right:-30px;bottom:-30px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}.stat strong{display:block;font-size:42px;background:linear-gradient(90deg,#fff,#00e5ff);-webkit-background-clip:text;color:transparent}.stat span{color:var(--muted)}
+.quote{text-align:center;border:1px solid #292950;background:#0e0e20;border-radius:24px;padding:45px;font-size:25px;font-weight:800}
+footer{text-align:center;padding:40px 7%;border-top:1px solid var(--line);color:#777;font-size:13px}footer b{color:#aaa}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+@media(max-width:750px){nav{padding:15px 5%}nav div:last-child{display:none}.about,.games,.stats{grid-template-columns:1fr}section{padding:70px 5%}.hero{padding-left:5%;padding-right:5%}h1{letter-spacing:-3px}.hero p{font-size:16px}.quote{font-size:20px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">MONSTER<span>2G</span></div>
+  <div><a href="#about">À propos</a><a href="#games">Jeux</a><a href="#objectif">Objectif</a></div>
+</nav>
+
+<header class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hero-inner">
+    <div class="badge">🎮 GAMING • MONSTER2G</div>
+    <h1>MONSTER<span class="g">2G</span></h1>
+    <p>Bienvenue dans mon univers gaming. Ici, je partage mes passions, mes jeux préférés et mon objectif : progresser tout en profitant de chaque partie.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#about">Découvrir mon univers</a>
+      <a class="btn secondary" href="#games">Mes jeux 🎮</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <h2 class="section-title">👾 Qui est Monster2g ?</h2>
+  <p class="section-sub">Un pseudo, un univers, une passion pour le gaming.</p>
+  <div class="about">
+    <article class="card"><h3>🔥 Ma passion</h3><p>J'aime les jeux vidéo, la progression et les défis. Pour moi, une partie est l'occasion de m'améliorer, de découvrir quelque chose de nouveau et surtout de passer un bon moment.</p></article>
+    <article class="card"><h3>⚡ Mon style</h3><p>Compétitif quand il le faut, tranquille quand je veux juste m'amuser. J'aime jouer seul, mais aussi partager des parties avec mes amis.</p></article>
+  </div>
+</section>
+
+<section id="games" class="reveal">
+  <h2 class="section-title">🎮 Mes jeux</h2>
+  <p class="section-sub">Les univers que j'aime explorer.</p>
+  <div class="games">
+    <article class="card game"><span class="emoji">⭐</span><h3>Brawl Stars</h3><p>Des matchs rapides, de la stratégie et toujours l'envie de monter plus haut.</p></article>
+    <article class="card game"><span class="emoji">🧱</span><h3>Roblox</h3><p>Un immense univers rempli de jeux et d'expériences à découvrir.</p></article>
+    <article class="card game"><span class="emoji">🌊</span><h3>Blox Fruits</h3><p>Exploration, progression et aventure dans l'univers Roblox.</p></article>
+  </div>
+</section>
+
+<section id="objectif" class="reveal">
+  <h2 class="section-title">🏆 Mes objectifs</h2>
+  <p class="section-sub">Toujours avancer, étape par étape.</p>
+  <div class="stats">
+    <div class="card stat"><strong>01</strong><span>Progresser</span></div>
+    <div class="card stat"><strong>02</strong><span>Découvrir</span></div>
+    <div class="card stat"><strong>03</strong><span>S'amuser</span></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="quote">« PLAY • PROGRESS • HAVE FUN »<br><small style="color:#888;font-size:13px">— MONSTER2G —</small></div>
+</section>
+
+<footer>© 2026 <b>Monster2g</b> • Site personnel gaming</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
